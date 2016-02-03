@@ -1,4 +1,4 @@
-# Encore Ticketing UI Release Namer
+# Release Namer
 
 Seeded with D&D 5E monsters as nouns; adjectives from [Wordnik](https://www.wordnik.com/lists/adjectives-with-2-syllables-that-end-in-y).
 
