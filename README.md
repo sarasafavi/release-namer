@@ -5,7 +5,7 @@ Seeded with D&D 5E monster types ([src](https://en.wikipedia.org/wiki/List_of_Du
 
 ## example
 
-_requires Python3 & pyyaml_
+_requires Python3_
 
 `>> python release_namer.py -l A`
 

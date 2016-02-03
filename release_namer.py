@@ -1,4 +1,3 @@
-import yaml
 import random
 from argparse import ArgumentParser
 
@@ -19,10 +18,10 @@ def get_sublist(names, letter):
     return [name for name in names if name.lower().startswith(letter)]
 
 if __name__ == "__main__":
-    with open("adjectives.yaml") as a:
-        adjectives = yaml.load(a)
-    with open("nouns.yaml") as n:
-        nouns = yaml.load(n)
+    with open("adjectives.txt") as a:
+        adjectives = [line.rstrip() for line in a]
+    with open("nouns.txt") as n:
+        nouns = [line.rstrip() for line in n]
 
     options = options()
     letter = options.letter.lower()
