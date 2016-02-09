@@ -46,7 +46,7 @@ if __name__ == "__main__":
     options = options()
     letter = options.letter.lower()
     nouns_file = options.nouns
-    adjectives_file = options.nouns
+    adjectives_file = options.adjectives
 
     if options.shakespear == True:
         nouns_file="shakespearean_nouns.txt"
