@@ -27,6 +27,15 @@ def options():
         default="nouns.txt",
         help="Path to text file containing nouns"
     )
+
+    parser.add_argument(
+            '-s',
+            '-shakespeare',
+            dest="shakespear",
+            action="store_true",
+            help="Use Shakespearean terms"
+    )
+
     return parser.parse_args()
 
 
@@ -36,10 +45,17 @@ def get_sublist(names, letter):
 if __name__ == "__main__":
     options = options()
     letter = options.letter.lower()
+    nouns_file = options.nouns
+    adjectives_file = options.nouns
 
-    with open(options.adjectives) as a:
+    if options.shakespear == True:
+        nouns_file="shakespearean_nouns.txt"
+        adjectives_file="shakespearean_adjectives.txt"
+
+
+    with open(adjectives_file) as a:
         adjectives = [line.rstrip() for line in a]
-    with open(options.nouns) as n:
+    with open(nouns_file) as n:
         nouns = [line.rstrip() for line in n]
 
     adjectives = get_sublist(adjectives, letter)
